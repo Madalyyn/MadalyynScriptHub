@@ -1,0 +1,67 @@
+local Rayfield = loadstring(game:HttpGet('https://raw.githubusercontent.com/shlexware/Rayfield/main/source'))()
+getgenv().SecureMode = true
+
+local Window = Rayfield:CreateWindow({
+	Name = "ScriptHub - By Madalyyn",
+	LoadingTitle = "ScriptHub - By Madalyyn",
+	LoadingSubtitle = "Noob",
+})
+local Tab = Window:CreateTab("Main Scripts")
+local Section = Tab:CreateSection("Litterally scripts for games")
+local Label = Tab:CreateLabel("Updating whenever i find new scripts")
+local TabUtil = Window:CreateTab("Utilities")
+local SectionUtil = TabUtil:CreateSection("Utilities (e.g : inf jump, noclip, etc)")
+local LabelUtil = TabUtil:CreateLabel("Updating whenever i find new scripts")
+
+local Button = Tab:CreateButton({
+	Name = "Your Bizarre Adventure",
+	Callback = function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/UltraStuff/scripts2/main/yba", true))()
+
+	end,
+})
+local Button = Tab:CreateButton({
+	Name = "Vynixius Hub (#1)",
+	Callback = function()
+		loadstring(game:HttpGet("https://raw.githubusercontent.com/RegularVynixu/Vynixius/main/Doors/Script.lua"))()
+	end,
+})
+local Button = Tab:CreateButton({
+	Name = "Ominoux Hub",
+	Callback = function()
+loadstring(game:HttpGet(('https://pastebin.com/raw/9QPGnLx6'),true))()
+
+	end,
+})
+local Button = Tab:CreateButton({
+	Name = "Neverlose Hub",
+	Callback = function()
+		loadstring(game:HttpGet("https://raw.githubusercontent.com/LuaQLeak/neverlose.xyz/main/Doors.lua"))()
+	end,
+})
+local Button = Tab:CreateButton({
+	Name = "Darkrai Hub (for android)",
+	Callback = function()
+		loadstring(game:HttpGet("https://raw.githubusercontent.com/GamingScripter/Darkrai-X/main/Games/Doors"))()
+	end,
+})
+local Button = Tab:CreateButton({
+	Name = "Crimson Hub (Key!)",
+	Callback = function()
+		loadstring(game:HttpGet("https://raw.githubusercontent.com/toosiwhip/statue/main/crimsonhub-statue.lua"))()
+	end,
+})
+local Button = TabUtil:CreateButton({
+	Name = "Get Crucifix",
+	Callback = function()
+		local Item = game:GetObjects("rbxassetid://11583101826")[1]
+Item.Parent = game.Players.LocalPlayer.Backpack
+
+	end,
+})
+local Button = TabUtil:CreateButton({
+	Name = "Entity Spawner Hub (will close this Hub!)",
+	Callback = function()
+		loadstring(game:HttpGet('https://raw.githubusercontent.com/plamen6789/DoorsEntitySummonerGUI/main/EntityGUI'))()
+	end,
+})
