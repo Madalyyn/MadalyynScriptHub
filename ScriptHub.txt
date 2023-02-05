@@ -14,7 +14,7 @@ local SectionUtil = TabUtil:CreateSection("Utilities (e.g : inf jump, noclip, et
 local LabelUtil = TabUtil:CreateLabel("Updating whenever i find new scripts")
 
 local Button = Tab:CreateButton({
-	Name = "Your Bizarre Adventure",
+	Name = "Your Bizarre Adventure (Bitch Boy Hub recommended)",
 	Callback = function()
 loadstring(game:HttpGet("https://raw.githubusercontent.com/UltraStuff/scripts2/main/yba", true))()
 
@@ -27,9 +27,9 @@ local Button = Tab:CreateButton({
 	end,
 })
 local Button = Tab:CreateButton({
-	Name = "Blox Fruits (KEY)",
+	Name = "FPS Games Aimbot (Universal)",
 	Callback = function()
-		loadstring(game:HttpGet("https://pastebin.com/yAQ6pAp0"))()
+		loadstring(game:HttpGet("https://raw.githubusercontent.com/Moneyguy008/Money-Hub/main/Script"))()
 	end,
 })
 local Button = Tab:CreateButton({
@@ -45,7 +45,7 @@ local Button = TabUtil:CreateButton({
 	end,
 })
 local Button = TabUtil:CreateButton({
-	Name = "Entity Spawner Hub (will close this Hub!)",
+	Name = "No Clip",
 	Callback = function()
 		loadstring(game:HttpGet("https://pastebin.com/9Tee9hea"))()
 	end,
