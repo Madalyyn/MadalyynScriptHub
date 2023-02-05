@@ -21,47 +21,32 @@ loadstring(game:HttpGet("https://raw.githubusercontent.com/UltraStuff/scripts2/m
 	end,
 })
 local Button = Tab:CreateButton({
-	Name = "Vynixius Hub (#1)",
+	Name = "Shindo Life",
 	Callback = function()
-		loadstring(game:HttpGet("https://raw.githubusercontent.com/RegularVynixu/Vynixius/main/Doors/Script.lua"))()
+		loadstring(game:HttpGet("https://raw.githubusercontent.com/Madalyyn/Shindo/main/script"))()
 	end,
 })
 local Button = Tab:CreateButton({
-	Name = "Ominoux Hub",
+	Name = "Blox Fruits (KEY)",
 	Callback = function()
-loadstring(game:HttpGet(('https://pastebin.com/raw/9QPGnLx6'),true))()
-
+		loadstring(game:HttpGet("https://pastebin.com/yAQ6pAp0"))()
 	end,
 })
 local Button = Tab:CreateButton({
-	Name = "Neverlose Hub",
+	Name = "Counter Blox",
 	Callback = function()
-		loadstring(game:HttpGet("https://raw.githubusercontent.com/LuaQLeak/neverlose.xyz/main/Doors.lua"))()
-	end,
-})
-local Button = Tab:CreateButton({
-	Name = "Darkrai Hub (for android)",
-	Callback = function()
-		loadstring(game:HttpGet("https://raw.githubusercontent.com/GamingScripter/Darkrai-X/main/Games/Doors"))()
-	end,
-})
-local Button = Tab:CreateButton({
-	Name = "Crimson Hub (Key!)",
-	Callback = function()
-		loadstring(game:HttpGet("https://raw.githubusercontent.com/toosiwhip/statue/main/crimsonhub-statue.lua"))()
+		loadstring(game:HttpGet("https://pastebin.com/8vnk2b3y"))()
 	end,
 })
 local Button = TabUtil:CreateButton({
-	Name = "Get Crucifix",
+	Name = "Infinite Jump",
 	Callback = function()
-		local Item = game:GetObjects("rbxassetid://11583101826")[1]
-Item.Parent = game.Players.LocalPlayer.Backpack
-
+		loadstring(game:HttpGet("https://pastebin.com/x8Lq3jS7"))()
 	end,
 })
 local Button = TabUtil:CreateButton({
 	Name = "Entity Spawner Hub (will close this Hub!)",
 	Callback = function()
-		loadstring(game:HttpGet('https://raw.githubusercontent.com/plamen6789/DoorsEntitySummonerGUI/main/EntityGUI'))()
+		loadstring(game:HttpGet("https://pastebin.com/9Tee9hea"))()
 	end,
 })
