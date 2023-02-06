@@ -91,7 +91,10 @@ loadstring(game:HttpGet("https://raw.githubusercontent.com/Skrapisismyscript/Sol
 end)
 
 local fpsc = serv:Channel("Universal Aimbot")
+
+fpsc:Button("Aimbot / ESP", function()
 loadstring(game:HttpGet("https://raw.githubusercontent.com/Moneyguy008/Money-Hub/main/Script"))()
+end)
 
 fpsc:Seperator()
 
