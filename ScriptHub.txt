@@ -1,8 +1,46 @@
 local DiscordLib = loadstring(game:HttpGet"https://raw.githubusercontent.com/dawid-scripts/UI-Libs/main/discord%20lib.txt")()
 
-local win = DiscordLib:Window("discord library")
+local win = DiscordLib:Window("Madalyyn's ScriptHub")
 
-local serv = win:Server("Main", "http://www.roblox.com/asset/?id=6031075938")
+local serv = win:Server("Main Scripts", "http://www.roblox.com/asset/?id=6031075938")
+
+local utls = serv:Channel("Utilities")
+
+utls:Button("Infinite Jump", function()
+  local InfiniteJumpEnabled = true
+  game:GetService("UserInputService").JumpRequest:connect(function()
+  	if InfiniteJumpEnabled then
+  		game:GetService"Players".LocalPlayer.Character:FindFirstChildOfClass'Humanoid':ChangeState("Jumping")
+  	end
+  end)
+end)
+
+utls:Button("NoClip", function()
+local Noclip = nil
+local Clip = nil
+ 
+function noclip()
+	Clip = false
+	local function Nocl()
+		if Clip == false and game.Players.LocalPlayer.Character ~= nil then
+			for _,v in pairs(game.Players.LocalPlayer.Character:GetDescendants()) do
+				if v:IsA('BasePart') and v.CanCollide and v.Name ~= floatName then
+					v.CanCollide = false
+				end
+			end
+		end
+		wait(0.21) -- basic optimization
+	end
+	Noclip = game:GetService('RunService').Stepped:Connect(Nocl)
+end
+ 
+function clip()
+	if Noclip then Noclip:Disconnect() end
+	Clip = true
+end
+ 
+noclip() -- to toggle noclip() and clip()
+end)
 
 local yba = serv:Channel("Your Bizarre Adventure")
 
@@ -51,6 +89,33 @@ shindo:Seperator()
 shindo:Button("Infinite RELLCoins", function()
 loadstring(game:HttpGet("https://raw.githubusercontent.com/Skrapisismyscript/Solo_Hub/main/INFRELLCOINS"))()
 end)
+
+local fpsc = serv:Channel("Universal Aimbot")
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Moneyguy008/Money-Hub/main/Script"))()
+
+fpsc:Seperator()
+
+fpsc:Label("This is a Aimbot / ESP exploit. Works on most FPS games.")
+
+local ctbx = serv:Channel("Counter Blox")
+
+ctbx:Button("Main Script", function()
+loadstring(game:HttpGet("https://pastebin.com/8vnk2b3y"))()
+end)
+
+local door = serv:Channel("Doors")
+
+door:Button("Ominous Vibes", function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/OminousVibes-Exploit/Scripts/main/doors/loadstring.lua"))()
+end)
+
+door:Seperator()
+
+door:Button("Vynixius Hub", function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/RegularVynixu/Vynixius/main/Doors/Script.lua"))()
+end)
+
+
 
 local tgls = serv:Channel("Toggles")
 
@@ -106,6 +171,3 @@ print("Killed everyone!")
 end)
 
 serv:Channel("by Madalyyn#1234")
-
-
-win:Server("aaa", "")
