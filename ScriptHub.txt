@@ -1,52 +1,76 @@
-local Rayfield = loadstring(game:HttpGet('https://raw.githubusercontent.com/shlexware/Rayfield/main/source'))()
-getgenv().SecureMode = true
+local DiscordLib = loadstring(game:HttpGet"https://raw.githubusercontent.com/dawid-scripts/UI-Libs/main/discord%20lib.txt")()
 
-local Window = Rayfield:CreateWindow({
-	Name = "ScriptHub - By Madalyyn",
-	LoadingTitle = "ScriptHub - By Madalyyn",
-	LoadingSubtitle = "Noob",
-})
-local Tab = Window:CreateTab("Main Scripts")
-local Section = Tab:CreateSection("Litterally scripts for games")
-local Label = Tab:CreateLabel("Updating whenever i find new scripts")
-local TabUtil = Window:CreateTab("Utilities")
-local SectionUtil = TabUtil:CreateSection("Utilities (e.g : inf jump, noclip, etc)")
-local LabelUtil = TabUtil:CreateLabel("Updating whenever i find new scripts")
+local win = DiscordLib:Window("discord library")
 
-local Button = Tab:CreateButton({
-	Name = "Your Bizarre Adventure (Bitch Boy Hub recommended)",
-	Callback = function()
-loadstring(game:HttpGet("https://raw.githubusercontent.com/UltraStuff/scripts2/main/yba", true))()
+local serv = win:Server("Preview", "")
 
-	end,
-})
-local Button = Tab:CreateButton({
-	Name = "Shindo Life",
-	Callback = function()
-		loadstring(game:HttpGet("https://raw.githubusercontent.com/Madalyyn/Shindo/main/script"))()
-	end,
-})
-local Button = Tab:CreateButton({
-	Name = "FPS Games Aimbot (Universal)",
-	Callback = function()
-		loadstring(game:HttpGet("https://raw.githubusercontent.com/Moneyguy008/Money-Hub/main/Script"))()
-	end,
-})
-local Button = Tab:CreateButton({
-	Name = "Counter Blox",
-	Callback = function()
-		loadstring(game:HttpGet("https://pastebin.com/8vnk2b3y"))()
-	end,
-})
-local Button = TabUtil:CreateButton({
-	Name = "Infinite Jump",
-	Callback = function()
-		loadstring(game:HttpGet("https://pastebin.com/x8Lq3jS7"))()
-	end,
-})
-local Button = TabUtil:CreateButton({
-	Name = "No Clip",
-	Callback = function()
-		loadstring(game:HttpGet("https://pastebin.com/9Tee9hea"))()
-	end,
-})
+local btns = serv:Channel("Buttons")
+
+btns:Button("inf jump", function()
+loadstring(game:HttpGet("https://pastebin.com/raw/WweihvrM"))()
+DiscordLib:Notification("Notification", "inf jump", "Okay!")
+end)
+
+btns:Seperator()
+
+btns:Button("Get max level", function()
+DiscordLib:Notification("Notification", "Max level!", "Okay!")
+end)
+
+local tgls = serv:Channel("Toggles")
+
+tgls:Toggle("Auto-Farm",false, function(bool)
+print(bool)
+end)
+
+local sldrs = serv:Channel("Sliders")
+
+local sldr = sldrs:Slider("Slide me!", 0, 1000, 400, function(t)
+print(t)
+end)
+
+sldrs:Button("Change to 50", function()
+sldr:Change(50)
+end)
+
+local drops = serv:Channel("Dropdowns")
+
+
+local drop = drops:Dropdown("Pick me!",{"Option 1","Option 2","Option 3","Option 4","Option 5"}, function(bool)
+print(bool)
+end)
+
+drops:Button("Clear", function()
+drop:Clear()
+end)
+
+drops:Button("Add option", function()
+drop:Add("Option")
+end)
+
+local clrs = serv:Channel("Colorpickers")
+
+clrs:Colorpicker("ESP Color", Color3.fromRGB(255,1,1), function(t)
+print(t)
+end)
+
+local textbs = serv:Channel("Textboxes")
+
+textbs:Textbox("Gun power", "Type here!", true, function(t)
+print(t)
+end)
+
+local lbls = serv:Channel("Labels")
+
+lbls:Label("This is just a label.")
+
+local bnds = serv:Channel("Binds")
+
+bnds:Bind("Kill bind", Enum.KeyCode.RightShift, function()
+print("Killed everyone!")
+end)
+
+serv:Channel("by dawid#7205")
+
+
+win:Server("Main", "http://www.roblox.com/asset/?id=6031075938")
