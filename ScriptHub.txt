@@ -2,19 +2,54 @@ local DiscordLib = loadstring(game:HttpGet"https://raw.githubusercontent.com/daw
 
 local win = DiscordLib:Window("discord library")
 
-local serv = win:Server("Preview", "")
+local serv = win:Server("Main", "http://www.roblox.com/asset/?id=6031075938")
 
-local btns = serv:Channel("Buttons")
+local yba = serv:Channel("Your Bizarre Adventure")
 
-btns:Button("inf jump", function()
-loadstring(game:HttpGet("https://pastebin.com/raw/WweihvrM"))()
-DiscordLib:Notification("Notification", "inf jump", "Okay!")
+yba:Button("Bitch Boy Hub - #1", function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/zakater5/LuaRepo/main/YBA/v3.lua"))()
 end)
 
-btns:Seperator()
+yba:Seperator()
 
-btns:Button("Get max level", function()
-DiscordLib:Notification("Notification", "Max level!", "Okay!")
+yba:Button("YBA Cuz Yes", function()
+loadstring(game:HttpGet"https://raw.githubusercontent.com/NukeVsCity/hackscript123/main/gui")()
+end)
+
+yba:Seperator()
+
+yba:Button("YBA Sucks Ass", function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Tobias020108Back/YBA-AUT/main/YBA-GUI-Rewrite.lua"))()
+end)
+
+yba:Seperator()
+
+yba:Button("Xenon Hub", function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/1f0yt/community/master/yurb"))()
+end)
+
+yba:Seperator()
+
+yba:Button("VG Hub", function()
+loadstring(game:HttpGet('https://raw.githubusercontent.com/1201for/V.G-Hub/main/V.Ghub'))()
+end)
+
+local shindo = serv:Channel("Shindo Life")
+
+shindo:Button("Main Script", function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/UltraStuff/scripts2/main/shindo", true))()
+end)
+
+shindo:Seperator()
+
+shindo:Button("Infinite Spins", function()
+DiscordLib:Notification("Notification", "Infinite Spins is not working at the moment!", "...")
+end)
+
+shindo:Seperator()
+
+shindo:Button("Infinite RELLCoins", function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Skrapisismyscript/Solo_Hub/main/INFRELLCOINS"))()
 end)
 
 local tgls = serv:Channel("Toggles")
@@ -70,7 +105,7 @@ bnds:Bind("Kill bind", Enum.KeyCode.RightShift, function()
 print("Killed everyone!")
 end)
 
-serv:Channel("by dawid#7205")
+serv:Channel("by Madalyyn#1234")
 
 
-win:Server("Main", "http://www.roblox.com/asset/?id=6031075938")
+win:Server("aaa", "")
