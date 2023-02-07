@@ -4,6 +4,12 @@ local win = DiscordLib:Window("Madalyyn's ScriptHub")
 
 local serv = win:Server("Main Scripts", "http://www.roblox.com/asset/?id=6031075938")
 
+local schub = serv:Channel("Best Script Hub")
+
+schub:Button("Script Hub", function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/1f0yt/community/master/gposcript"))()
+end)
+
 local utls = serv:Channel("Utilities")
 
 utls:Button("Infinite Jump", function()
